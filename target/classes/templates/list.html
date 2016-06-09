@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>S</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.1/jquery.min.js"
+            th:src="@{/webjars/jquery/2.2.1/jquery.min.js}"></script>
+</head>
+<body th:object="${users}">
+<div th:replace="header :: header"></div>
+<div class="main-container container">
+    <div class="panel panel-default">
+        <div class="panel-heading">List of users</div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Pesel</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>Home number</th>
+                <th>Postal Code</th>
+                <th>Action</th>
+            </tr>
+            <tr th:each="user:${users}">
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:text="${user.phone}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.pesel}"></td>
+                <td th:text="${user.address.city}"></td>
+                <td th:text="${user.address.street}"></td>
+                <td th:text="${user.address.homeNumber}"></td>
+                <td th:text="${user.address.postalCode}"></td>
+                <td>
+                    <input id="s" type="submit" name="s" value="Update" />
+                    <input id="edit" type="submit" name="edit" value="Delete" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.main-container {
+    display: table;
+    vertical-align: middle;
+    padding-top: 100px;
+}
