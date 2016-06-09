@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>S</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.2.1/jquery.min.js"
+            th:src="@{/webjars/jquery/2.2.1/jquery.min.js}"></script>
+</head>
+<body th:object="${user}">
+<div th:replace="header :: header"></div>
+<div class="main-container container">
+        <div class="panel panel-primary">
+            <div class="panel-heading inscription-normal">Edit User</div>
+            <div class="panel-body">
+                <form  th:action="@{/users/edit}" method="POST">
+                    <input type="hidden" class="form-control" placeholder="id" aria-describedby="basic-addon1" th:field="*{id}" th:value="${user.id}" th:required="required"></input>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1" th:field="*{name}" th:value="${user.name}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name:</label>
+                        <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" th:field="*{lastName}" th:value="${user.lastName}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone:</label>
+                        <input type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1" th:field="*{phone}" th:value="${user.phone}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1" th:field="*{email}" th:value="${user.email}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Pesel:</label>
+                        <input type="text" class="form-control" placeholder="Pesel" aria-describedby="basic-addon1" th:field="*{pesel}" th:value="${user.pesel}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>City:</label>
+                        <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1" th:field="*{address.city}" th:value="${user.address.city}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Street:</label>
+                        <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1" th:field="*{address.street}" th:value="${user.address.street}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Home number:</label>
+                        <input type="text" class="form-control" placeholder="Home Number" aria-describedby="basic-addon1"  th:field="*{address.homeNumber}" th:value="${user.address.homeNumber}" th:required="required"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>Postal code:</label>
+                        <input type="text" class="form-control" placeholder="Postal Code" aria-describedby="basic-addon1" th:field="*{address.postalCode}" th:value="${user.address.postalCode}" th:required="required"></input>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-sm">Save</button>
+                </form>
+            </div>
+        </div>
+</div>
+</body>
+</html>

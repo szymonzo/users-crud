@@ -17,26 +17,21 @@ public class Users {
     @Column(name = "id")
     private Long id;
 
-    @NotEmpty
     @Column
     private String name;
 
-    @NotEmpty
     @Column
     private String lastName;
 
-    @NotEmpty
     @Column
     private String phone;
 
     @Column
     private String email;
 
-    @NotEmpty
     @Column
     private String pesel;
 
-    @NotNull
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Address address;
 

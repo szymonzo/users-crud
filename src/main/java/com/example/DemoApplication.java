@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableJpaRepositories
-//@EnableWebMvc
 public class DemoApplication {
 
     public static void main(String[] args) {

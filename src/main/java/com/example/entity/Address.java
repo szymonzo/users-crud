@@ -1,7 +1,5 @@
 package com.example.entity;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
 
 /**
@@ -16,19 +14,16 @@ public class Address {
     @Column(name = "id")
     private Long id;
 
-    @NotEmpty
     @Column
     private String street;
 
-    @NotEmpty
+
     @Column
     private String homeNumber;
 
-    @NotEmpty
     @Column
     private String city;
 
-    @NotEmpty
     @Column
     private String postalCode;
 
