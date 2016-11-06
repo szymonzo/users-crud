@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="row" th:fragment="userFilter">
+    <div class="col-sm-5">
+        <div class="panel panel-primary">
+            <div class="panel-heading inscription-normal">Filter</div>
+            <div class="panel-body ">
+                <form th:object="${userFilter}" th:action="@{/users/filter}" method="POST">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="control-label col-sm-2" for="imie">imie:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="imie" placeholder="Wprowadź imię" th:field="*{name}"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-2" for="nazwisko">nazwisko:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nazwisko"
+                                       placeholder="Wprowadź nazwisko"  th:field="*{lastName}"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-2" for="pesel">pesel:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="pesel" placeholder="Wprowadź pesel"  th:field="*{pesel}"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-sm-2" for="email">email:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email" placeholder="Wprowadź email"  th:field="*{email}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info pull-right">Find</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

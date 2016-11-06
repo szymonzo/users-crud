@@ -1,4 +1,4 @@
-package com.example;
+package com.example.initializer;
 
 import com.example.entity.Address;
 import com.example.entity.Users;
@@ -8,9 +8,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by szymon on 08.06.16.
- */
 @Component
 public class TestDataBaseInitializer implements ApplicationListener<ContextRefreshedEvent> {
 

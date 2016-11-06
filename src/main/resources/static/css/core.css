@@ -1,13 +1,17 @@
 .main-container {
-    padding-top: 150px;
+    padding-top: 130px;
 }
 
-.form-inline{ display: inline; }
-.inscription-lg{
+.form-inline {
+    display: inline;
+}
+
+.inscription-lg {
     font-weight: bold;
     font-size: 250%;
 }
-.inscription-normal{
+
+.inscription-normal {
     font-weight: bold;
     font-size: 150%;
 }

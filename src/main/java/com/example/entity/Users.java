@@ -1,13 +1,7 @@
 package com.example.entity;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
-/**
- * Created by szymon on 08.06.16.
- */
 @Entity
 @Table(name = "users")
 public class Users {
@@ -32,7 +26,7 @@ public class Users {
     @Column
     private String pesel;
 
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Address address;
 
     public Long getId() {

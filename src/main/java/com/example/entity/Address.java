@@ -2,9 +2,6 @@ package com.example.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by szymon on 08.06.16.
- */
 @Entity
 @Table(name = "addres")
 public class Address {
@@ -16,7 +13,6 @@ public class Address {
 
     @Column
     private String street;
-
 
     @Column
     private String homeNumber;
