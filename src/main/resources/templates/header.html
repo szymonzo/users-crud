@@ -26,6 +26,10 @@
             </button>
             <a class="navbar-brand" th:href="@{/}">Home</a>
             <a class="navbar-brand" href="/users">Users</a>
+            <a class="navbar-brand" onclick="document.getElementById('logout').submit()"> Log Out</a>
+            <form id="logout" th:action="@{/logout}" method="post">
+                <input type="submit" hidden="hidden" value="Log out"/>
+            </form>
         </div>
     </div>
 </div>
